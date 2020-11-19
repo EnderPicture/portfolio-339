@@ -1,5 +1,9 @@
 $white: #ddd;
 $black: #222;
+
+$tablet-break: 62rem;
+$mobile-break: 39rem;
+
 * {
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
@@ -9,6 +13,11 @@ $black: #222;
 body {
     margin: 0;
     background-color: $black;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    @media screen and (max-width: $mobile-break) {
+        font-size: 1rem;
+    }
 }
 img {
     object-fit: cover;
@@ -27,12 +36,18 @@ img {
     }
     &__content {
         display: flex;
+        flex: 0;
+        flex-shrink: 1;
         > a {
-            flex: 0;
-            flex-shrink: 0;
             color: $white;
             text-decoration: none;
             padding: 1rem;
+            transition: 0.6s ease;
+            &:hover {
+                opacity: 0.5;
+                transform: translateY(2px);
+                transition: 0.2s ease;
+            }
         }
     }
 }
@@ -74,31 +89,71 @@ h1 {
     margin: 0;
     background: linear-gradient(
         90deg,
-        rgba(72, 198, 239, 1) 0%,
-        rgba(111, 134, 214, 1) 100%
+        rgba(255, 255, 255, 1) 0%,
+        rgb(211, 211, 211) 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     color: #0000;
+    @media screen and (max-width: $tablet-break) {
+        font-size: 5rem;
+    }
+}
+section {
+    margin-bottom: 5rem;
 }
 .mid {
     margin-right: auto;
     margin-left: auto;
-    max-width: 60vw;
+    max-width: 50rem;
+    @media screen and (max-width: $tablet-break) {
+        max-width: initial;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    @media screen and (max-width: $mobile-break) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    &-flex {
+        margin-right: auto;
+        margin-left: auto;
+        min-width: 50rem;
+        max-width: 60vw;
+        @media screen and (max-width: $tablet-break) {
+            min-width: initial;
+            max-width: initial;
+            margin-right: 5rem;
+            margin-left: 5rem;
+        }
+        @media screen and (max-width: $mobile-break) {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
 }
-.works {
+.works-con {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin-bottom: 10rem;
+    @media screen and (max-width: $tablet-break) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $mobile-break) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 .work-item {
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
+    transition: 0.6s ease;
     &:hover {
+        opacity: 0.5;
+        transform: translateY(2px);
+        transition: 0.2s ease;
         > img {
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: 0.2s ease;
         }
     }
@@ -125,4 +180,27 @@ h1 {
             margin-bottom: 0;
         }
     }
+}
+
+.half-con {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @media screen and (max-width: $mobile-break) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.third-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @media screen and (max-width: $tablet-break) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $mobile-break) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.reading-width {
+    max-width: 30rem;
 }
