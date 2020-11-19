@@ -81,9 +81,16 @@ header {
     background-position: center;
     background-size: cover;
     background-image: url("https://images.unsplash.com/photo-1524168644224-a521b6533306?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+
     position: relative;
+    &.header-incandescent {
+        background-image: url("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/87b9e7c1-2ca9-44e7-be4e-19efb7ae1572/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201119T082512Z&X-Amz-Expires=86400&X-Amz-Signature=affb6ab75f7e79b426dd7a90bedc9175132e06c94455d34fbca5e3f9f9bc00bb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22");
+    }
+    &.header-sirius-train {
+        background-image: url("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/334c930c-a369-461b-8b49-d8b06085fad3/33e82d_547e3f74cf914dfa9011084a0bca8413_mv2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201119T082552Z&X-Amz-Expires=86400&X-Amz-Signature=0629a67e7b5351b2b37a511adeed2849a9fbfd08f7e0feebb336f1f3b1bf7031&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2233e82d_547e3f74cf914dfa9011084a0bca8413_mv2.png%22");
+    }
     &.short {
-        height: 30vh;
+        height: 40vh;
         @media screen and (max-width: $tablet-break) {
             min-height: 10rem;
         }
@@ -125,8 +132,15 @@ h1 {
     text-shadow: 0 0 2px rgba($white, 0.18), 0 0 4px rgba($white, 0.18),
         0 0 8px rgba($white, 0.18), 0 0 16px rgba($white, 0.18),
         0 0 32px rgba($white, 0.18);
-    @media screen and (max-width: $tablet-break) {
+    padding: 0.1em 0;
+    &.small {
         font-size: 5rem;
+        @media screen and (max-width: $tablet-break) {
+            font-size: 2rem;
+        }
+    }
+    @media screen and (max-width: $tablet-break) {
+        font-size: 1rem;
     }
 }
 section,
