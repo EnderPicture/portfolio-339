@@ -1,5 +1,6 @@
 $white: #ddd;
 $black: #222;
+$accent: #57c9f8;
 
 $tablet-break: 62rem;
 $mobile-break: 39rem;
@@ -49,6 +50,13 @@ img {
         }
         .logo {
             font-weight: 900;
+            color: $accent;
+            text-shadow: 
+                0 0 2px rgba($accent, .2),
+                0 0 4px rgba($accent, .2),
+                0 0 8px rgba($accent, .2),
+                0 0 16px rgba($accent, .2),
+                0 0 32px rgba($accent, .2);
         }
         > a {
             color: $white;
