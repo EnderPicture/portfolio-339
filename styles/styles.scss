@@ -84,10 +84,10 @@ header {
 
     position: relative;
     &.header-incandescent {
-        background-image: url("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/87b9e7c1-2ca9-44e7-be4e-19efb7ae1572/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201119T082512Z&X-Amz-Expires=86400&X-Amz-Signature=affb6ab75f7e79b426dd7a90bedc9175132e06c94455d34fbca5e3f9f9bc00bb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22");
+        background-image: url("../images/the-incandescent-enemy.png");
     }
     &.header-sirius-train {
-        background-image: url("https://s3.us-west-2.amazonaws.com/secure.notion-static.com/334c930c-a369-461b-8b49-d8b06085fad3/33e82d_547e3f74cf914dfa9011084a0bca8413_mv2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201119T082552Z&X-Amz-Expires=86400&X-Amz-Signature=0629a67e7b5351b2b37a511adeed2849a9fbfd08f7e0feebb336f1f3b1bf7031&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2233e82d_547e3f74cf914dfa9011084a0bca8413_mv2.png%22");
+        background-image: url("../images/sirius-train-game.png");
     }
     &.short {
         height: 40vh;
@@ -191,6 +191,7 @@ header {
 .work-item {
     position: relative;
     border-radius: 0.5rem;
+    transform: translate(0,0);
     overflow: hidden;
     transition: 0.6s ease;
     &:hover {
@@ -271,5 +272,20 @@ footer {
         transition: 0.2s ease;
         background-color: lighten($black, 9);
         border-radius: 1rem;
+    }
+}
+
+.video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    position: relative;
+    > iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
     }
 }
