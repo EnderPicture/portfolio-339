@@ -5,7 +5,7 @@ $accent: #57c9f8;
 $tablet-break: 62rem;
 $mobile-break: 39rem;
 
-minimize css@import "./normalize.scss";
+@import "./normalize.scss";
 
 
 * {
