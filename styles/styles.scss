@@ -260,17 +260,18 @@ footer {
     padding: 1rem 0 1rem 0;
     background-color: lighten($black, 3);
 }
-.contact {
+.items-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1rem;
 }
-.link {
+.item {
     text-decoration: none;
     padding: 1rem;
 
     color: $accent;
 
+    
     transition: 0.6s ease;
     &:hover {
         opacity: 0.5;
