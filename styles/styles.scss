@@ -299,6 +299,7 @@ footer {
 
     position: relative;
     > iframe {
+        border: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -306,7 +307,7 @@ footer {
         width: 100%;
     }
 }
-code > pre {
+pre {
     width: 100%;
     overflow-x: auto;
     background-color: lighten($black, 10);
