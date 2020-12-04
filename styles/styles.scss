@@ -82,6 +82,9 @@ h4 {
             }
         }
     }
+    &.demo {
+        position: initial;
+    }
 }
 header {
     height: 60vh;
@@ -274,9 +277,9 @@ footer {
 .item {
     text-decoration: none;
     padding: 1rem;
-    
+
     color: $white;
-    
+
     margin-top: 0;
 
     &[href] {
@@ -313,5 +316,11 @@ pre {
     background-color: lighten($black, 10);
     padding: 1rem;
     border-radius: 0.5rem;
-    line-height: -1rem;
+}
+p > a {
+    transition: 0.6s ease;
+    &:hover {
+        opacity: 0.5;
+        transition: 0.2s ease;
+    }
 }
