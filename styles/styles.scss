@@ -7,7 +7,6 @@ $mobile-break: 39rem;
 
 @import "./normalize.scss";
 
-
 * {
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
@@ -26,7 +25,10 @@ body {
 img {
     object-fit: cover;
 }
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin: 1em 0;
 }
 .figure {
@@ -152,6 +154,9 @@ h1 {
 section,
 header {
     margin-bottom: 5rem;
+    @media screen and (max-width: $tablet-break) {
+        margin-bottom: 2rem;
+    }
 }
 .mid {
     margin-right: auto;
@@ -197,7 +202,7 @@ header {
 .work-item {
     position: relative;
     border-radius: 0.5rem;
-    transform: translate(0,0);
+    transform: translate(0, 0);
     overflow: hidden;
     transition: 0.6s ease;
     &:hover {
@@ -264,21 +269,26 @@ footer {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1rem;
+    margin-top: -1rem;
 }
 .item {
     text-decoration: none;
     padding: 1rem;
-
-    color: $accent;
-
     
-    transition: 0.6s ease;
-    &:hover {
-        opacity: 0.5;
-        transform: translateY(2px);
-        transition: 0.2s ease;
-        background-color: lighten($black, 9);
-        border-radius: 1rem;
+    color: $white;
+    
+    margin-top: 0;
+
+    &[href] {
+        color: $accent;
+        transition: 0.6s ease;
+        &:hover {
+            opacity: 0.5;
+            transform: translateY(2px);
+            transition: 0.2s ease;
+            background-color: lighten($black, 9);
+            border-radius: 1rem;
+        }
     }
 }
 
@@ -301,6 +311,6 @@ code > pre {
     overflow-x: auto;
     background-color: lighten($black, 10);
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     line-height: -1rem;
 }
